@@ -33,30 +33,30 @@ const Products = () => {
   ];
 
   return (
-    <div className="font-sans flex flex-col items-center">
-      <div className="w-full bg-surface py-20 border-b border-contrast/10">
-        <div className="max-w-7xl w-full px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-contrast mb-4">Our Products</h1>
-          <p className="text-xl text-contrast/80 max-w-2xl mx-auto">Engineered solutions for every surface. High-quality, reliable formulation made in our advanced production facilities.</p>
+    <div className="font-sans flex flex-col items-center pt-16">
+      <section className="w-full bg-bg py-24 md:py-32 flex justify-center border-b border-border">
+        <div className="max-w-6xl w-full mx-auto px-6 text-center space-y-6">
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-primary leading-[1.1]">Our Products</h1>
+          <p className="text-base text-muted max-w-2xl mx-auto leading-relaxed">Engineered solutions for every surface. High-quality, reliable formulation made in our advanced production facilities.</p>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full py-20 flex justify-center">
-        <div className="max-w-7xl w-full px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="w-full bg-bg py-24 md:py-32 flex justify-center">
+        <div className="max-w-6xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {categories.map((cat, i) => (
-             <div key={i} className="bg-white p-8 rounded-[12px] border border-contrast/10 shadow-sm flex flex-col justify-between">
+             <div key={i} className="bg-white dark:bg-[#111] p-6 rounded-2xl border border-border flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                   <div className="w-12 h-12 bg-surface rounded-[8px] flex items-center justify-center mb-6 text-primary border border-contrast/5 font-bold text-lg">
+                   <div className="w-12 h-12 bg-bg rounded-xl flex items-center justify-center mb-6 text-accent border border-border font-medium text-xl shadow-sm">
                      {cat.icon}
                    </div>
-                   <h3 className="text-2xl font-bold text-contrast mb-3">{cat.name}</h3>
-                   <p className="text-contrast/80 text-sm leading-relaxed mb-8">{cat.desc}</p>
+                   <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-primary mb-2">{cat.name}</h3>
+                   <p className="text-base text-muted leading-relaxed mb-8">{cat.desc}</p>
                 </div>
                 <div>
-                   <h4 className="text-xs font-semibold text-contrast/50 uppercase tracking-widest mb-3">Available Colors</h4>
+                   <h4 className="text-xs font-semibold text-muted uppercase tracking-widest mb-3">Available Colors</h4>
                    <div className="flex flex-wrap gap-2">
                      {cat.colors.map(color => (
-                        <span key={color} className="px-3 py-1 bg-surface text-contrast text-xs font-medium rounded border border-contrast/5">
+                        <span key={color} className="px-3 py-1 bg-bg text-muted text-sm rounded-lg border border-border">
                            {color}
                         </span>
                      ))}
@@ -65,15 +65,15 @@ const Products = () => {
              </div>
           ))}
 
-          <div className="bg-primary p-8 rounded-[12px] border border-primary flex flex-col justify-center items-center text-center">
-              <h3 className="text-2xl font-bold text-white mb-3">Need a Custom Formulation?</h3>
-              <p className="text-white/80 text-sm mb-8 max-w-sm">We provide tailored color matching and specific structural formulations for bulk industrial orders.</p>
-              <a href="/contact" className="px-6 py-3 bg-white text-primary font-medium rounded-[12px] hover:bg-surface transition-colors">
+          <div className="bg-accent p-6 rounded-2xl border border-accent flex flex-col justify-center items-center text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-3 leading-[1.1]">Need a Custom Formulation?</h3>
+              <p className="text-base text-white/90 leading-relaxed mb-8 max-w-sm">We provide tailored color matching and specific structural formulations for bulk industrial orders.</p>
+              <a href="/contact" className="bg-white text-accent px-6 py-3 rounded-xl font-medium hover:opacity-90 transition shadow-md">
                  Contact Sales
               </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
