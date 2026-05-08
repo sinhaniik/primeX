@@ -7,6 +7,8 @@ const stats = [
   { value: 'ISO', label: '9001-2015' },
 ];
 
+const primeXImage = '/images/primex-spray-paint.png';
+
 const HeroSection = () => {
   const ref = useScrollReveal<HTMLElement>();
 
@@ -46,17 +48,13 @@ const HeroSection = () => {
 
         {/* Right — decorative visual */}
         <div className="hidden md:flex justify-end">
-          <div className="relative w-full max-w-sm aspect-square">
-            {/* Can body placeholder */}
-            <div className="absolute inset-4 bg-[#132238] border border-[rgba(140,164,184,0.18)] flex flex-col items-center justify-center">
-              <div className="w-20 h-36 bg-[#1a2d45] border border-[rgba(201,146,42,0.35)] flex flex-col items-center justify-center gap-2 relative">
-                <div className="absolute -top-3 w-6 h-3 bg-[#8ca4b8] rounded-t-sm" />
-                <span className="text-[#c9922a] text-xs font-bold tracking-[0.15em] uppercase" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                  PrimeX
-                </span>
-                <div className="w-8 h-px bg-[#c9922a] opacity-40" />
-                <span className="text-[#7a95aa] text-[8px] tracking-widest uppercase">Spray</span>
-              </div>
+          <div className="relative w-full max-w-sm">
+            <div className="bg-[#132238] border border-[rgba(140,164,184,0.18)] min-h-[380px] flex flex-col items-center justify-center px-10 py-8">
+              <img
+                src={primeXImage}
+                alt="PrimeX spray paint can"
+                className="max-h-[310px] w-auto object-contain drop-shadow-[0_18px_35px_rgba(0,0,0,0.35)]"
+              />
               <span className="mt-6 text-[#7a95aa] text-[10px] uppercase tracking-[0.3em]">
                 Industrial Grade
               </span>

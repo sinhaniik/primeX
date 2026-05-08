@@ -6,6 +6,8 @@ const variants = [
   'Red Oxide Primer', 'Grey Primer', 'Clear Coat', 'Custom Shades',
 ];
 
+const primeXImage = '/images/primex-spray-paint.png';
+
 const Products = () => {
   const ref = useScrollReveal<HTMLDivElement>();
 
@@ -32,14 +34,13 @@ const Products = () => {
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             {/* Featured — PrimeX Spray Paint */}
             <div className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 md:p-10 lg:row-span-2 flex flex-col">
-              {/* Decorative can visual */}
               <div className="mb-8 flex items-center gap-6">
-                <div className="w-16 h-28 bg-[#1a2d45] border border-[rgba(201,146,42,0.35)] flex flex-col items-center justify-center gap-1 relative flex-shrink-0">
-                  <div className="absolute -top-2 w-5 h-2 bg-[#8ca4b8] rounded-t-sm" />
-                  <span className="text-[#c9922a] text-[10px] font-bold tracking-wider" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                    PrimeX
-                  </span>
-                  <div className="w-6 h-px bg-[#c9922a] opacity-30" />
+                <div className="w-24 h-36 bg-[#0d1b2a] border border-[rgba(201,146,42,0.24)] flex items-center justify-center overflow-hidden flex-shrink-0">
+                  <img
+                    src={primeXImage}
+                    alt="PrimeX spray paint can"
+                    className="h-32 w-auto object-contain"
+                  />
                 </div>
                 <div>
                   <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] block mb-1">

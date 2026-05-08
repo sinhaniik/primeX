@@ -5,23 +5,35 @@ interface Product {
   title: string;
   desc: string;
   tag: string;
+  image?: string;
+  imageFit?: 'contain' | 'cover';
 }
+
+const primeXImage = '/images/primex-spray-paint.png';
+const industrialChemicalsImage = '/images/industrial-chemicals.png';
+const labInstrumentsImage = '/images/lab-instruments.png';
 
 const products: Product[] = [
   {
     title: 'PrimeX Spray Paint',
     desc: 'Quick-drying, industrial-grade spray paints in 7+ variants. Gloss, matte, metallic, primer, and custom shades.',
     tag: 'Flagship',
+    image: primeXImage,
+    imageFit: 'contain',
   },
   {
     title: 'Industrial Chemicals',
     desc: 'Surface treatment chemicals for cleaning, degreasing, and industrial process applications.',
     tag: 'Chemicals',
+    image: industrialChemicalsImage,
+    imageFit: 'cover',
   },
   {
     title: 'Lab Instruments',
     desc: 'Precision measurement and testing instruments for laboratory and quality control use.',
     tag: 'Instruments',
+    image: labInstrumentsImage,
+    imageFit: 'cover',
   },
 ];
 
@@ -56,6 +68,19 @@ const ProductsPreview = () => {
               className="card-gold-hover bg-[#0d1b2a] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col justify-between min-h-[240px] group"
             >
               <div>
+                {p.image && (
+                  <div className="mb-6 h-40 bg-[#132238] border border-[rgba(140,164,184,0.14)] flex items-center justify-center overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={`${p.title} product photo`}
+                      className={
+                        p.imageFit === 'cover'
+                          ? 'h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
+                          : 'h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105'
+                      }
+                    />
+                  </div>
+                )}
                 <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] mb-4 block">
                   {p.tag}
                 </span>
