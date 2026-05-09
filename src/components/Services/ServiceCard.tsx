@@ -9,10 +9,10 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ number, title, description, features }: ServiceCardProps) => {
   return (
-    <div className="relative bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 md:p-10 overflow-hidden group transition-all duration-300 border-l-2 border-l-transparent hover:border-l-[#c9922a]">
+    <div className="relative bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 overflow-hidden group transition-all duration-300 border-l-2 border-l-transparent hover:border-l-[var(--color-accent)]">
       {/* Large background number */}
       <span
-        className="absolute top-4 right-6 text-[120px] md:text-[160px] font-bold leading-none text-[#c9922a] opacity-[0.04] select-none pointer-events-none"
+        className="absolute top-4 right-6 text-[120px] md:text-[160px] font-bold leading-none text-[var(--color-accent)] opacity-[0.04] select-none pointer-events-none"
         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
       >
         {number}
@@ -22,31 +22,31 @@ const ServiceCard = ({ number, title, description, features }: ServiceCardProps)
         {/* Left — number */}
         <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-2">
           <span
-            className="text-[#c9922a] text-3xl md:text-4xl font-bold"
+            className="text-[var(--color-accent)] text-3xl md:text-4xl font-bold"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             {number}
           </span>
-          <div className="w-8 h-px bg-[#c9922a] opacity-40 hidden md:block" />
+          <div className="w-8 h-px bg-[var(--color-accent)] opacity-40 hidden md:block" />
         </div>
 
         {/* Right — content */}
         <div>
           <h3
-            className="text-xl md:text-2xl font-bold text-[#d0dce8] mb-3 tracking-tight"
+            className="text-xl md:text-2xl font-bold text-[var(--color-text)] mb-3 tracking-tight"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             {title}
           </h3>
-          <p className="text-[#7a95aa] text-sm leading-relaxed mb-6 max-w-2xl">
+          <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-6 max-w-2xl">
             {description}
           </p>
 
           {/* Features */}
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mb-8">
             {features.map((f) => (
-              <li key={f} className="text-[#8ca4b8] text-sm flex items-start gap-2">
-                <span className="text-[#c9922a] mt-0.5 flex-shrink-0">■</span>
+              <li key={f} className="text-[var(--color-secondary)] text-sm flex items-start gap-2">
+                <span className="text-[var(--color-accent)] mt-0.5 flex-shrink-0">■</span>
                 {f}
               </li>
             ))}
@@ -54,7 +54,7 @@ const ServiceCard = ({ number, title, description, features }: ServiceCardProps)
 
           <Link
             to="/contact"
-            className="inline-block bg-[#c9922a] text-[#0d1b2a] px-7 py-3 text-xs font-semibold uppercase tracking-wider hover:bg-[#e8b84b] transition-colors"
+            className="inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-7 py-3 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-hover)] transition-colors"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Request a Quote

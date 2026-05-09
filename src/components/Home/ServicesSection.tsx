@@ -33,20 +33,20 @@ const ServicesPreview = () => {
   const ref = useScrollReveal<HTMLElement>();
 
   return (
-    <section ref={ref} id="services" className="reveal bg-[#0d1b2a] py-24 md:py-32 border-b border-[rgba(140,164,184,0.18)]">
+    <section ref={ref} id="services" className="reveal bg-[var(--color-bg)] py-24 md:py-32 border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <p className="text-[#c9922a] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+            <p className="text-[var(--color-accent)] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Services
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#d0dce8] tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] tracking-tight">
               What We Do
             </h2>
           </div>
           <Link
             to="/contact"
-            className="text-[#c9922a] text-sm font-semibold hover:text-[#e8b84b] transition-colors"
+            className="text-[var(--color-accent)] text-sm font-semibold hover:text-[var(--color-accent-hover)] transition-colors"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Request Service →
@@ -56,28 +56,28 @@ const ServicesPreview = () => {
           {services.map((s) => (
             <div
               key={s.num}
-              className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col"
+              className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
             >
-              <span className="text-[#c9922a] text-2xl font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <span className="text-[var(--color-accent)] text-2xl font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {s.num}
               </span>
-              <h3 className="text-lg font-bold text-[#d0dce8] mb-2" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <h3 className="text-lg font-bold text-[var(--color-text)] mb-2" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {s.title}
               </h3>
-              <p className="text-[#7a95aa] text-sm leading-relaxed mb-6">
+              <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-6">
                 {s.desc}
               </p>
               <ul className="space-y-2 mb-8 flex-1">
                 {s.features.map((f) => (
-                  <li key={f} className="text-[#8ca4b8] text-xs flex items-start gap-2">
-                    <span className="text-[#c9922a] mt-0.5">■</span>
+                  <li key={f} className="text-[var(--color-secondary)] text-xs flex items-start gap-2">
+                    <span className="text-[var(--color-accent)] mt-0.5">■</span>
                     {f}
                   </li>
                 ))}
               </ul>
               <Link
                 to="/contact"
-                className="border border-[rgba(201,146,42,0.35)] text-[#c9922a] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[rgba(201,146,42,0.08)] transition-colors text-center"
+                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Get Quote

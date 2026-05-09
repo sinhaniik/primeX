@@ -41,20 +41,20 @@ const ProductsPreview = () => {
   const ref = useScrollReveal<HTMLElement>();
 
   return (
-    <section ref={ref} className="reveal bg-[#132238] py-24 md:py-32 border-b border-[rgba(140,164,184,0.18)]">
+    <section ref={ref} className="reveal bg-[var(--color-surface)] py-24 md:py-32 border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <p className="text-[#c9922a] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+            <p className="text-[var(--color-accent)] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Products
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#d0dce8] tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] tracking-tight">
               What We Make
             </h2>
           </div>
           <Link
             to="/products"
-            className="text-[#c9922a] text-sm font-semibold hover:text-[#e8b84b] transition-colors"
+            className="text-[var(--color-accent)] text-sm font-semibold hover:text-[var(--color-accent-hover)] transition-colors"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             View All Products →
@@ -65,11 +65,11 @@ const ProductsPreview = () => {
             <Link
               key={p.title}
               to="/products"
-              className="card-gold-hover bg-[#0d1b2a] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col justify-between min-h-[240px] group"
+              className="card-gold-hover bg-[var(--color-bg)] border border-[var(--color-border)] p-8 flex flex-col justify-between min-h-[240px] group"
             >
               <div>
                 {p.image && (
-                  <div className="mb-6 h-40 bg-[#132238] border border-[rgba(140,164,184,0.14)] flex items-center justify-center overflow-hidden">
+                  <div className="mb-6 h-40 bg-[var(--color-surface)] border border-[var(--color-border-soft)] flex items-center justify-center overflow-hidden">
                     <img
                       src={p.image}
                       alt={`${p.title} product photo`}
@@ -81,17 +81,17 @@ const ProductsPreview = () => {
                     />
                   </div>
                 )}
-                <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] mb-4 block">
+                <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-4 block">
                   {p.tag}
                 </span>
-                <h3 className="text-xl font-bold text-[#d0dce8] mb-3 group-hover:text-[#c9922a] transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                <h3 className="text-xl font-bold text-[var(--color-text)] mb-3 group-hover:text-[var(--color-accent)] transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {p.title}
                 </h3>
-                <p className="text-[#7a95aa] text-sm leading-relaxed">
+                <p className="text-[var(--color-muted)] text-sm leading-relaxed">
                   {p.desc}
                 </p>
               </div>
-              <span className="mt-6 text-[#8ca4b8] text-xs font-medium uppercase tracking-widest group-hover:text-[#c9922a] transition-colors">
+              <span className="mt-6 text-[var(--color-secondary)] text-xs font-medium uppercase tracking-widest group-hover:text-[var(--color-accent)] transition-colors">
                 View Details →
               </span>
             </Link>

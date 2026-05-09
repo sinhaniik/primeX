@@ -24,13 +24,13 @@ const WhyChooseUs = () => {
   const ref = useScrollReveal<HTMLElement>();
 
   return (
-    <section ref={ref} id="why-us" className="reveal bg-[#0d1b2a] py-24 md:py-32 border-b border-[rgba(140,164,184,0.18)]">
+    <section ref={ref} id="why-us" className="reveal bg-[var(--color-bg)] py-24 md:py-32 border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-[#c9922a] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+          <p className="text-[var(--color-accent)] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Why Us
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#d0dce8] tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] tracking-tight">
             Built for Industry
           </h2>
         </div>
@@ -38,12 +38,12 @@ const WhyChooseUs = () => {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col"
+              className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
             >
-              <h3 className="text-lg font-bold text-[#d0dce8] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <h3 className="text-lg font-bold text-[var(--color-text)] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {r.title}
               </h3>
-              <p className="text-[#7a95aa] text-sm leading-relaxed">
+              <p className="text-[var(--color-muted)] text-sm leading-relaxed">
                 {r.desc}
               </p>
             </div>

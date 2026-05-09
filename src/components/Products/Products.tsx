@@ -14,28 +14,28 @@ const Products = () => {
   return (
     <div ref={ref} className="reveal">
       {/* Header */}
-      <section className="bg-[#132238] py-20 md:py-24 border-b border-[rgba(140,164,184,0.18)]">
+      <section className="bg-[var(--color-surface)] py-20 md:py-24 border-b border-[var(--color-border)]">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[#c9922a] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+          <p className="text-[var(--color-accent)] text-xs font-semibold uppercase tracking-[0.2em] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Our Products
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d0dce8] tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] tracking-tight">
             Product Range
           </h1>
-          <p className="text-[#7a95aa] text-base mt-4 max-w-2xl leading-relaxed">
+          <p className="text-[var(--color-muted)] text-base mt-4 max-w-2xl leading-relaxed">
             From our flagship PrimeX Spray Paint to industrial chemicals and precision lab instruments — built for performance.
           </p>
         </div>
       </section>
 
       {/* Product grid */}
-      <section className="bg-[#0d1b2a] py-24 md:py-32">
+      <section className="bg-[var(--color-bg)] py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             {/* Featured — PrimeX Spray Paint */}
-            <div className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 md:p-10 lg:row-span-2 flex flex-col">
+            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 lg:row-span-2 flex flex-col">
               <div className="mb-8 flex items-center gap-6">
-                <div className="w-24 h-36 bg-[#0d1b2a] border border-[rgba(201,146,42,0.24)] flex items-center justify-center overflow-hidden flex-shrink-0">
+                <div className="w-24 h-36 bg-[var(--color-bg)] border border-[var(--color-accent-border-soft)] flex items-center justify-center overflow-hidden flex-shrink-0">
                   <img
                     src={primeXImage}
                     alt="PrimeX spray paint can"
@@ -43,35 +43,35 @@ const Products = () => {
                   />
                 </div>
                 <div>
-                  <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] block mb-1">
+                  <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] block mb-1">
                     Flagship Product
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#d0dce8] tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                     PrimeX Spray Paint
                   </h2>
                 </div>
               </div>
 
-              <p className="text-[#7a95aa] text-sm leading-relaxed mb-6">
+              <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-6">
                 Quick-drying, industrial-grade spray paints designed for automobiles, home appliances, and industrial components. Smooth finish with strong coverage across multiple surfaces.
               </p>
 
               {/* Specs */}
-              <div className="flex flex-wrap gap-x-8 gap-y-2 mb-6 text-xs text-[#8ca4b8]">
-                <span><strong className="text-[#d0dce8]">Net Qty:</strong> 300g (440ml)</span>
-                <span><strong className="text-[#d0dce8]">Variants:</strong> 7+</span>
+              <div className="flex flex-wrap gap-x-8 gap-y-2 mb-6 text-xs text-[var(--color-secondary)]">
+                <span><strong className="text-[var(--color-text)]">Net Qty:</strong> 300g (440ml)</span>
+                <span><strong className="text-[var(--color-text)]">Variants:</strong> 7+</span>
               </div>
 
               {/* Variant pills */}
               <div className="mb-6">
-                <p className="text-[#7a95aa] text-xs uppercase tracking-widest mb-3 font-semibold">
+                <p className="text-[var(--color-muted)] text-xs uppercase tracking-widest mb-3 font-semibold">
                   Available Variants
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {variants.map((v) => (
                     <span
                       key={v}
-                      className="px-3 py-1.5 bg-[#0d1b2a] border border-[rgba(140,164,184,0.18)] text-[#8ca4b8] text-xs"
+                      className="px-3 py-1.5 bg-[var(--color-bg)] border border-[var(--color-border)] text-[var(--color-secondary)] text-xs"
                     >
                       {v}
                     </span>
@@ -79,14 +79,14 @@ const Products = () => {
                 </div>
               </div>
 
-              <p className="text-[#7a95aa] text-xs italic mb-8">
+              <p className="text-[var(--color-muted)] text-xs italic mb-8">
                 Shade card available on request.
               </p>
 
               <div className="mt-auto">
                 <Link
                   to="/contact"
-                  className="bg-[#c9922a] text-[#0d1b2a] px-8 py-3.5 text-sm font-semibold hover:bg-[#e8b84b] transition-colors inline-block"
+                  className="bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors inline-block"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   Enquire Now
@@ -95,19 +95,19 @@ const Products = () => {
             </div>
 
             {/* Chemicals */}
-            <div className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col">
-              <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
+            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+              <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Chemicals
               </span>
-              <h3 className="text-xl font-bold text-[#d0dce8] mb-3 tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <h3 className="text-xl font-bold text-[var(--color-text)] mb-3 tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 Industrial Chemicals
               </h3>
-              <p className="text-[#7a95aa] text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-6 flex-1">
                 Surface treatment chemicals for cleaning, degreasing, and industrial process applications. Custom formulations available.
               </p>
               <Link
                 to="/contact"
-                className="border border-[rgba(201,146,42,0.35)] text-[#c9922a] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[rgba(201,146,42,0.08)] transition-colors text-center"
+                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Enquire
@@ -115,19 +115,19 @@ const Products = () => {
             </div>
 
             {/* Lab Instruments */}
-            <div className="card-gold-hover bg-[#132238] border border-[rgba(140,164,184,0.18)] p-8 flex flex-col">
-              <span className="text-[#c9922a] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
+            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+              <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Instruments
               </span>
-              <h3 className="text-xl font-bold text-[#d0dce8] mb-3 tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <h3 className="text-xl font-bold text-[var(--color-text)] mb-3 tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 Lab Instruments
               </h3>
-              <p className="text-[#7a95aa] text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-6 flex-1">
                 All types of precision laboratory instruments for quality testing, measurement, and industrial process control.
               </p>
               <Link
                 to="/contact"
-                className="border border-[rgba(201,146,42,0.35)] text-[#c9922a] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[rgba(201,146,42,0.08)] transition-colors text-center"
+                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Enquire

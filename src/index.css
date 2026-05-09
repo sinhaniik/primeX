@@ -7,12 +7,60 @@
 }
 
 @layer base {
+  :root,
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+    --color-bg: #0d1b2a;
+    --color-bg-rgb: 13 27 42;
+    --color-surface: #132238;
+    --color-footer: #080f1a;
+    --color-text: #d0dce8;
+    --color-muted: #7a95aa;
+    --color-muted-rgb: 122 149 170;
+    --color-secondary: #8ca4b8;
+    --color-accent: #c9922a;
+    --color-accent-hover: #e8b84b;
+    --color-on-accent: #0d1b2a;
+    --color-on-accent-rgb: 13 27 42;
+    --color-border: rgba(140, 164, 184, 0.18);
+    --color-border-soft: rgba(140, 164, 184, 0.14);
+    --color-border-subtle: rgba(140, 164, 184, 0.12);
+    --color-accent-border: rgba(201, 146, 42, 0.35);
+    --color-accent-border-soft: rgba(201, 146, 42, 0.24);
+    --color-accent-soft: rgba(201, 146, 42, 0.08);
+    --shadow-accent-soft: rgba(201, 146, 42, 0.08);
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --color-bg: #f6f8fb;
+    --color-bg-rgb: 246 248 251;
+    --color-surface: #ffffff;
+    --color-footer: #eef3f7;
+    --color-text: #0d1b2a;
+    --color-muted: #53677a;
+    --color-muted-rgb: 83 103 122;
+    --color-secondary: #37546a;
+    --color-accent: #b77f1e;
+    --color-accent-hover: #c9922a;
+    --color-on-accent: #0d1b2a;
+    --color-on-accent-rgb: 13 27 42;
+    --color-border: rgba(13, 27, 42, 0.14);
+    --color-border-soft: rgba(13, 27, 42, 0.1);
+    --color-border-subtle: rgba(13, 27, 42, 0.08);
+    --color-accent-border: rgba(183, 127, 30, 0.4);
+    --color-accent-border-soft: rgba(183, 127, 30, 0.28);
+    --color-accent-soft: rgba(183, 127, 30, 0.08);
+    --shadow-accent-soft: rgba(183, 127, 30, 0.12);
+  }
+
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #0d1b2a;
-    color: #d0dce8;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,7 +85,7 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   .card-gold-hover:hover {
-    border-top-color: #c9922a;
-    box-shadow: 0 -2px 20px rgba(201, 146, 42, 0.08);
+    border-top-color: var(--color-accent);
+    box-shadow: 0 -2px 20px var(--shadow-accent-soft);
   }
 }
