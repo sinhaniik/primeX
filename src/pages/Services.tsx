@@ -28,10 +28,9 @@ const services: ServiceData[] = [
     description:
       'Industrial surface coating and painting services for manufacturers requiring large-volume, consistent finish quality.',
     features: [
-      'Industrial spray coating',
-      'Primer + topcoat systems',
-      'Rust-preventive surface treatment',
-      'Batch job work available',
+      'Powder coating',
+      'Liquid coating',
+      'Plating coating',
     ],
   },
   {

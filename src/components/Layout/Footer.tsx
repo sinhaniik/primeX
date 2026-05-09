@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
 
+const logoImage = '/images/abni-logo.png';
+
 const Footer = () => {
   return (
     <footer className="bg-[#080f1a] border-t border-[rgba(140,164,184,0.18)] mt-auto">
       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* About */}
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#c9922a] flex items-center justify-center font-bold text-[#0d1b2a] text-xs" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-              AN
-            </div>
-            <span className="text-[#d0dce8] font-semibold text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-              AbNi Unified Engineering
-            </span>
-          </div>
+          <img
+            src={logoImage}
+            alt="AbNi Unified Engineering"
+            className="h-14 w-auto max-w-[180px] object-contain"
+          />
           <p className="text-[#7a95aa] text-sm leading-relaxed">
             ISO 9001-2015 certified industrial manufacturer. Fabrication, coating, press shop services and high-performance spray paints.
           </p>

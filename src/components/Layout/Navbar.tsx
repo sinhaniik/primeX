@@ -18,6 +18,8 @@ const links: NavLink[] = [
   { label: 'Contact', to: '/contact', isAnchor: false },
 ];
 
+const logoImage = '/images/abni-logo.png';
+
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -57,18 +59,12 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-[#0d1b2a]/95 backdrop-blur-md border-b border-[rgba(140,164,184,0.18)]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3" onClick={() => dispatch(closeMobileMenu())}>
-          <div className="w-9 h-9 bg-[#c9922a] flex items-center justify-center font-bold text-[#0d1b2a] text-sm tracking-tight" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-            AN
-          </div>
-          <div className="hidden sm:flex flex-col leading-none">
-            <span className="text-[#d0dce8] font-semibold text-sm tracking-wide" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-              AbNi Unified Engineering
-            </span>
-            <span className="text-[#7a95aa] text-[10px] tracking-widest uppercase">
-              ISO 9001-2015
-            </span>
-          </div>
+        <Link to="/" className="flex items-center" onClick={() => dispatch(closeMobileMenu())}>
+          <img
+            src={logoImage}
+            alt="AbNi Unified Engineering"
+            className="h-10 sm:h-11 w-auto max-w-[150px] sm:max-w-[170px] object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}

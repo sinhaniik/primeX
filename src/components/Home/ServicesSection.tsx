@@ -19,7 +19,7 @@ const services: Service[] = [
     num: '02',
     title: 'Coating Job Work',
     desc: 'Surface coating solutions for durability, finish, and corrosion resistance.',
-    features: ['Spray coating', 'Primer + topcoat', 'Rust-preventive', 'Batch processing'],
+    features: ['Powder coating', 'Liquid coating', 'Plating coating'],
   },
   {
     num: '03',
