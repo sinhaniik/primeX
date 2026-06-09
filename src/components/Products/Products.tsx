@@ -6,7 +6,7 @@ const variants = [
   'Red Oxide Primer', 'Grey Primer', 'Clear Coat', 'Custom Shades',
 ];
 
-const primeXImage = '/images/primex-spray-paint.png';
+const primeXImage = '/images/primex-spray-paint.jpeg';
 const primeXCoatImage = '/images/primex-coat.jpeg';
 
 const Products = () => {
@@ -36,11 +36,11 @@ const Products = () => {
             {/* Featured — PrimeX Spray Paint */}
             <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 lg:row-span-2 flex flex-col">
               <div className="mb-8 flex items-center gap-6">
-                <div className="w-24 h-36 bg-[var(--color-bg)] border border-[var(--color-accent-border-soft)] flex items-center justify-center overflow-hidden flex-shrink-0">
+                <div className="w-36 h-36 bg-[var(--color-bg)] border border-[var(--color-accent-border-soft)] flex items-center justify-center overflow-hidden flex-shrink-0">
                   <img
                     src={primeXImage}
-                    alt="PrimeX spray paint can"
-                    className="motion-image h-32 w-auto object-contain"
+                    alt="PrimeX spray paint applications"
+                    className="motion-image h-full w-full object-contain"
                   />
                 </div>
                 <div>

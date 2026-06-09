@@ -9,7 +9,7 @@ interface Product {
   imageFit?: 'contain' | 'cover';
 }
 
-const primeXImage = '/images/primex-spray-paint.png';
+const primeXImage = '/images/primex-spray-paint.jpeg';
 const primeXCoatImage = '/images/primex-coat.jpeg';
 const industrialChemicalsImage = '/images/industrial-chemicals.png';
 const labInstrumentsImage = '/images/lab-instruments.png';
