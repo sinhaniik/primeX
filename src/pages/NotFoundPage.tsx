@@ -14,7 +14,7 @@ const NotFoundPage = () => {
       </p>
       <Link
         to="/"
-        className="bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors"
+        className="motion-button bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3 text-sm font-semibold hover:bg-[var(--color-accent-hover)]"
         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
       >
         Back to Home

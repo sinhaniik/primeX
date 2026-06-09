@@ -65,7 +65,8 @@ const ProductsPreview = () => {
             <Link
               key={p.title}
               to="/products"
-              className="card-gold-hover bg-[var(--color-bg)] border border-[var(--color-border)] p-8 flex flex-col justify-between min-h-[240px] group"
+              data-reveal-item
+              className="reveal-item motion-card card-gold-hover bg-[var(--color-bg)] border border-[var(--color-border)] p-8 flex flex-col justify-between min-h-[240px] group"
             >
               <div>
                 {p.image && (
@@ -75,8 +76,8 @@ const ProductsPreview = () => {
                       alt={`${p.title} product photo`}
                       className={
                         p.imageFit === 'cover'
-                          ? 'h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
-                          : 'h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105'
+                          ? 'motion-image h-full w-full object-cover'
+                          : 'motion-image h-36 w-auto object-contain'
                       }
                     />
                   </div>
@@ -91,7 +92,7 @@ const ProductsPreview = () => {
                   {p.desc}
                 </p>
               </div>
-              <span className="mt-6 text-[var(--color-secondary)] text-xs font-medium uppercase tracking-widest group-hover:text-[var(--color-accent)] transition-colors">
+              <span className="motion-action mt-6 text-[var(--color-secondary)] text-xs font-medium uppercase tracking-widest group-hover:text-[var(--color-accent)] transition-colors">
                 View Details →
               </span>
             </Link>

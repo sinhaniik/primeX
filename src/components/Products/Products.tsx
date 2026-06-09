@@ -33,13 +33,13 @@ const Products = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
             {/* Featured — PrimeX Spray Paint */}
-            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 lg:row-span-2 flex flex-col">
+            <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 lg:row-span-2 flex flex-col">
               <div className="mb-8 flex items-center gap-6">
                 <div className="w-24 h-36 bg-[var(--color-bg)] border border-[var(--color-accent-border-soft)] flex items-center justify-center overflow-hidden flex-shrink-0">
                   <img
                     src={primeXImage}
                     alt="PrimeX spray paint can"
-                    className="h-32 w-auto object-contain"
+                    className="motion-image h-32 w-auto object-contain"
                   />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ const Products = () => {
               <div className="mt-auto">
                 <Link
                   to="/contact"
-                  className="bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors inline-block"
+                  className="motion-button bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)] inline-block"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   Enquire Now
@@ -95,7 +95,7 @@ const Products = () => {
             </div>
 
             {/* Chemicals */}
-            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+            <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
               <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Chemicals
               </span>
@@ -107,7 +107,7 @@ const Products = () => {
               </p>
               <Link
                 to="/contact"
-                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
+                className="motion-button border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Enquire
@@ -115,7 +115,7 @@ const Products = () => {
             </div>
 
             {/* Lab Instruments */}
-            <div className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+            <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
               <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Instruments
               </span>
@@ -127,7 +127,7 @@ const Products = () => {
               </p>
               <Link
                 to="/contact"
-                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
+                className="motion-button border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Enquire

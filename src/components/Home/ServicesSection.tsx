@@ -56,9 +56,10 @@ const ServicesPreview = () => {
           {services.map((s) => (
             <div
               key={s.num}
-              className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
+              data-reveal-item
+              className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
             >
-              <span className="text-[var(--color-accent)] text-2xl font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <span className="motion-accent text-[var(--color-accent)] text-2xl font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {s.num}
               </span>
               <h3 className="text-lg font-bold text-[var(--color-text)] mb-2" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
@@ -77,7 +78,7 @@ const ServicesPreview = () => {
               </ul>
               <Link
                 to="/contact"
-                className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] transition-colors text-center"
+                className="motion-button border border-[var(--color-accent-border)] text-[var(--color-accent)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-soft)] text-center"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Get Quote

@@ -17,7 +17,7 @@ const CTASection = () => (
       </p>
       <Link
         to="/contact"
-        className="inline-block bg-[var(--color-bg)] text-[var(--color-accent)] px-10 py-4 text-sm font-semibold hover:bg-[var(--color-surface)] transition-colors"
+        className="motion-button inline-block bg-[var(--color-bg)] text-[var(--color-accent)] px-10 py-4 text-sm font-semibold hover:bg-[var(--color-surface)]"
         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
       >
         Contact Us Today

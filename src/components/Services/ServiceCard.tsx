@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ number, title, description, features }: ServiceCardProps) => {
   return (
-    <div className="relative bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 overflow-hidden group transition-all duration-300 border-l-2 border-l-transparent hover:border-l-[var(--color-accent)]">
+    <div data-reveal-item className="reveal-item motion-card relative bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10 overflow-hidden group border-l-2 border-l-transparent hover:border-l-[var(--color-accent)]">
       {/* Large background number */}
       <span
         className="absolute top-4 right-6 text-[120px] md:text-[160px] font-bold leading-none text-[var(--color-accent)] opacity-[0.04] select-none pointer-events-none"
@@ -22,7 +22,7 @@ const ServiceCard = ({ number, title, description, features }: ServiceCardProps)
         {/* Left — number */}
         <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-2">
           <span
-            className="text-[var(--color-accent)] text-3xl md:text-4xl font-bold"
+            className="motion-accent text-[var(--color-accent)] text-3xl md:text-4xl font-bold"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             {number}
@@ -54,7 +54,7 @@ const ServiceCard = ({ number, title, description, features }: ServiceCardProps)
 
           <Link
             to="/contact"
-            className="inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-7 py-3 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-hover)] transition-colors"
+            className="motion-button inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-7 py-3 text-xs font-semibold uppercase tracking-wider hover:bg-[var(--color-accent-hover)]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Request a Quote

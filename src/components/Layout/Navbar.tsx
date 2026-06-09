@@ -145,7 +145,7 @@ const Navbar = () => {
           )}
           <Link
             to="/contact"
-            className="ml-2 bg-[var(--color-accent)] text-[var(--color-on-accent)] px-5 py-2 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors"
+            className="motion-button ml-2 bg-[var(--color-accent)] text-[var(--color-on-accent)] px-5 py-2 text-sm font-semibold hover:bg-[var(--color-accent-hover)]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Get a Quote
@@ -204,7 +204,7 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={() => dispatch(closeMobileMenu())}
-            className="mt-2 bg-[var(--color-accent)] text-[var(--color-on-accent)] px-5 py-3 text-sm font-semibold text-center hover:bg-[var(--color-accent-hover)] transition-colors"
+            className="motion-button mt-2 bg-[var(--color-accent)] text-[var(--color-on-accent)] px-5 py-3 text-sm font-semibold text-center hover:bg-[var(--color-accent-hover)]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Get a Quote

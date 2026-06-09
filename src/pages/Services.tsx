@@ -96,7 +96,7 @@ export default function Services() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-10 py-4 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors"
+            className="motion-button inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-10 py-4 text-sm font-semibold hover:bg-[var(--color-accent-hover)]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Get in Touch

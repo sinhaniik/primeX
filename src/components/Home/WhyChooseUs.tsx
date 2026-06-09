@@ -38,7 +38,8 @@ const WhyChooseUs = () => {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
+              data-reveal-item
+              className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col"
             >
               <h3 className="text-lg font-bold text-[var(--color-text)] mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {r.title}

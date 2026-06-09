@@ -103,14 +103,14 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/contact"
-              className="bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)] transition-colors text-center"
+              className="motion-button bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)] text-center"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               Get a Quote
             </Link>
             <Link
               to="/products"
-              className="border border-[var(--color-accent-border)] text-[var(--color-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-soft)] transition-colors text-center"
+              className="motion-button border border-[var(--color-accent-border)] text-[var(--color-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-soft)] text-center"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               View Products
