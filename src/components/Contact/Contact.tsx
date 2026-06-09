@@ -19,6 +19,7 @@ const initialFormData: FormData = {
 
 const interestOptions = [
   'PrimeX Spray Paint',
+  'PRIMEX COAT Powder Coatings',
   'Industrial Chemicals',
   'Lab Instruments',
   'Fabrication Works',

@@ -10,6 +10,7 @@ interface Product {
 }
 
 const primeXImage = '/images/primex-spray-paint.png';
+const primeXCoatImage = '/images/primex-coat.jpeg';
 const industrialChemicalsImage = '/images/industrial-chemicals.png';
 const labInstrumentsImage = '/images/lab-instruments.png';
 
@@ -20,6 +21,13 @@ const products: Product[] = [
     tag: 'Flagship',
     image: primeXImage,
     imageFit: 'contain',
+  },
+  {
+    title: 'PRIMEX COAT',
+    desc: 'Advanced powder coatings delivering uniform coverage, vibrant color retention, and a premium industrial finish.',
+    tag: 'Powder Coatings',
+    image: primeXCoatImage,
+    imageFit: 'cover',
   },
   {
     title: 'Industrial Chemicals',
@@ -60,7 +68,7 @@ const ProductsPreview = () => {
             View All Products →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((p) => (
             <Link
               key={p.title}

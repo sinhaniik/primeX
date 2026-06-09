@@ -25,6 +25,7 @@ const Footer = () => {
           </h4>
           <ul className="space-y-3 text-sm text-[var(--color-muted)]">
             <li><Link to="/products" className="hover:text-[var(--color-accent)] transition-colors">PrimeX Spray Paint</Link></li>
+            <li><Link to="/products" className="hover:text-[var(--color-accent)] transition-colors">PRIMEX COAT</Link></li>
             <li><Link to="/products" className="hover:text-[var(--color-accent)] transition-colors">Industrial Chemicals</Link></li>
             <li><Link to="/products" className="hover:text-[var(--color-accent)] transition-colors">Lab Instruments</Link></li>
           </ul>

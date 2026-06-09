@@ -7,6 +7,7 @@ const variants = [
 ];
 
 const primeXImage = '/images/primex-spray-paint.png';
+const primeXCoatImage = '/images/primex-coat.jpeg';
 
 const Products = () => {
   const ref = useScrollReveal<HTMLDivElement>();
@@ -23,7 +24,7 @@ const Products = () => {
             Product Range
           </h1>
           <p className="text-[var(--color-muted)] text-base mt-4 max-w-2xl leading-relaxed">
-            From our flagship PrimeX Spray Paint to industrial chemicals and precision lab instruments — built for performance.
+            From PrimeX spray paints and powder coatings to industrial chemicals and precision lab instruments — built for performance.
           </p>
         </div>
       </section>
@@ -132,6 +133,37 @@ const Products = () => {
               >
                 Enquire
               </Link>
+            </div>
+          </div>
+
+          {/* PRIMEX COAT Powder Coatings */}
+          <div data-reveal-item className="reveal-item motion-card card-gold-hover mt-8 bg-[var(--color-surface)] border border-[var(--color-border)] p-8 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.35fr] gap-8 lg:gap-12 items-center">
+              <div className="bg-[var(--color-bg)] border border-[var(--color-accent-border-soft)] overflow-hidden">
+                <img
+                  src={primeXCoatImage}
+                  alt="PRIMEX COAT powder coatings package"
+                  className="motion-image w-full h-auto object-cover"
+                />
+              </div>
+              <div>
+                <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] block mb-3">
+                  Powder Coatings
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] tracking-tight mb-4">
+                  PRIMEX COAT
+                </h2>
+                <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-8">
+                  With advanced formulation technology, PRIMEX COAT ensures uniform coverage, vibrant color retention, and enhanced aesthetic appeal while supporting environmentally responsible coating processes. Suitable for metal furniture, automotive components, electrical enclosures, architectural structures, and general industrial products, PRIMEX COAT offers reliable performance and a premium finish that meets modern industry standards.
+                </p>
+                <Link
+                  to="/contact"
+                  className="motion-button inline-block bg-[var(--color-accent)] text-[var(--color-on-accent)] px-8 py-3.5 text-sm font-semibold hover:bg-[var(--color-accent-hover)]"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  Enquire About PRIMEX COAT
+                </Link>
+              </div>
             </div>
           </div>
         </div>
