@@ -9,6 +9,8 @@ interface FormData {
   message: string;
 }
 
+type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
+
 const initialFormData: FormData = {
   fullName: '',
   phone: '',
@@ -31,22 +33,56 @@ const interestOptions = [
 
 const Contact = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
-  const [submitted, setSubmitted] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>('idle');
+  const [submissionError, setSubmissionError] = useState('');
   const ref = useScrollReveal<HTMLDivElement>();
+  const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (submissionStatus === 'error') {
+      setSubmissionStatus('idle');
+      setSubmissionError('');
+    }
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+
+    if (!formspreeEndpoint) {
+      setSubmissionStatus('error');
+      setSubmissionError('The enquiry form is not configured yet. Please contact us by phone or email.');
+      return;
+    }
+
+    setSubmissionStatus('submitting');
+    setSubmissionError('');
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `New website enquiry: ${formData.interest}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Formspree could not deliver the enquiry.');
+      }
+
+      setSubmissionStatus('success');
       setFormData(initialFormData);
-    }, 3000);
+    } catch {
+      setSubmissionStatus('error');
+      setSubmissionError('We could not send your enquiry. Please try again or contact us directly.');
+    }
   };
 
   return (
@@ -143,7 +179,7 @@ const Contact = () => {
               Send an Enquiry
             </h2>
 
-            {submitted ? (
+            {submissionStatus === 'success' ? (
               <div className="bg-[var(--color-surface)] border border-[var(--color-accent-border)] p-8 text-center">
                 <div className="text-[var(--color-accent)] text-3xl mb-3">✓</div>
                 <p className="text-[var(--color-text)] font-semibold mb-1" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
@@ -152,6 +188,14 @@ const Contact = () => {
                 <p className="text-[var(--color-muted)] text-sm">
                   We'll get back to you shortly.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmissionStatus('idle')}
+                  className="motion-button mt-6 border border-[var(--color-accent-border)] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)] hover:bg-[var(--color-accent-soft)]"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  Send Another Enquiry
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -234,12 +278,22 @@ const Contact = () => {
                   />
                 </div>
 
+                {submissionStatus === 'error' && (
+                  <p
+                    role="alert"
+                    className="border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                  >
+                    {submissionError}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="motion-button w-full h-12 bg-[var(--color-accent)] text-[var(--color-on-accent)] font-semibold text-sm hover:bg-[var(--color-accent-hover)]"
+                  disabled={submissionStatus === 'submitting'}
+                  className="motion-button w-full h-12 bg-[var(--color-accent)] text-[var(--color-on-accent)] font-semibold text-sm hover:bg-[var(--color-accent-hover)] disabled:cursor-not-allowed disabled:opacity-60"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
-                  Submit Enquiry
+                  {submissionStatus === 'submitting' ? 'Sending Enquiry...' : 'Submit Enquiry'}
                 </button>
               </form>
             )}

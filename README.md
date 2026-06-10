@@ -64,6 +64,23 @@ npm run preview
 
 Build output is written to `dist/`.
 
+## Formspree Enquiry Form
+
+The contact form sends enquiries through Formspree. Create a Formspree form with
+`abni.unified.engineering@gmail.com` as its verified recipient, then copy the
+form endpoint into your environment configuration:
+
+```bash
+cp .env.example .env.local
+```
+
+```env
+VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+```
+
+For Vercel, add `VITE_FORMSPREE_ENDPOINT` in the project's environment
+variables and redeploy the site.
+
 ## Docker
 
 The Docker image builds the Vite app and serves it with Nginx. The included Nginx config falls back to `index.html` so direct visits to client-side routes such as `/products` and `/contact` work correctly.
