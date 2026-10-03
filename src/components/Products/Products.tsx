@@ -8,6 +8,8 @@ const variants = [
 
 const primeXImage = '/images/primex-spray-paint.jpeg';
 const primeXCoatImage = '/images/primex-coat.jpeg';
+const industrialChemicalsImage = '/images/industrial-chemicals.png';
+const labInstrumentsImage = '/images/lab-instruments.png';
 
 const Products = () => {
   const ref = useScrollReveal<HTMLDivElement>();
@@ -97,6 +99,9 @@ const Products = () => {
 
             {/* Chemicals */}
             <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+              <div className="mb-6 h-36 bg-[var(--color-bg)] border border-[var(--color-border-soft)] overflow-hidden">
+                <img src={industrialChemicalsImage} alt="Industrial chemicals" className="motion-image h-full w-full object-cover" />
+              </div>
               <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Chemicals
               </span>
@@ -117,6 +122,9 @@ const Products = () => {
 
             {/* Lab Instruments */}
             <div data-reveal-item className="reveal-item motion-card card-gold-hover bg-[var(--color-surface)] border border-[var(--color-border)] p-8 flex flex-col">
+              <div className="mb-6 h-36 bg-[var(--color-bg)] border border-[var(--color-border-soft)] overflow-hidden">
+                <img src={labInstrumentsImage} alt="Lab instruments" className="motion-image h-full w-full object-cover" />
+              </div>
               <span className="text-[var(--color-accent)] text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">
                 Instruments
               </span>

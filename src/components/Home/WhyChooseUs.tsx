@@ -8,7 +8,7 @@ interface Reason {
 const reasons: Reason[] = [
   {
     title: 'High Quality',
-    desc: 'ISO 9001-2015 certified processes ensure consistent quality across every product and service we deliver.',
+    desc: 'Consistent quality across every product and service we deliver.',
   },
   {
     title: 'Fast Delivery',

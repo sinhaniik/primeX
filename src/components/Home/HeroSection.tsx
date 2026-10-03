@@ -6,7 +6,7 @@ const stats = [
   { value: '7+', label: 'Product Lines' },
   { value: '3', label: 'Services' },
   { value: 'ISO', label: '9001-2015' },
-  { value: 'GSTIN', label: '24LIOPS2996C1ZK' },
+  { value: 'GST No.', label: '24LIOPS2996C1ZK' },
 ];
 
 const primeXVideo = '/AbNI%20intro.mp4';
@@ -46,7 +46,7 @@ const HeroSection = () => {
         </h2>
       </div>
 
-      <div className="relative w-5/6 mx-auto">
+      <div className="group relative w-5/6 mx-auto">
         <video
           ref={videoRef}
           src={primeXVideo}
@@ -65,7 +65,7 @@ const HeroSection = () => {
         <button
           type="button"
           onClick={togglePlayback}
-          className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+          className={`absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-black/50 text-white backdrop-blur-sm transition-opacity hover:bg-black/70 focus-visible:opacity-100 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : ''}`}
           aria-label={isPlaying ? 'Pause video' : 'Play video'}
         >
           {isPlaying ? (
@@ -99,7 +99,7 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto px-6 pt-20 md:pt-28">
         <div className="space-y-8 max-w-3xl mx-auto text-center">
           <p className="text-[var(--color-muted)] text-base leading-relaxed max-w-lg mx-auto">
-            ISO 9001-2015 certified manufacturer delivering fabrication, surface coating, and high-performance spray paints for industrial and commercial applications across India.
+            Fabrication, surface coating, and high-performance spray paints for industrial and commercial applications across India.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

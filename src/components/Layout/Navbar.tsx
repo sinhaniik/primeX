@@ -17,7 +17,6 @@ const links: NavLink[] = [
   { label: 'Products', to: '/products', isAnchor: false },
   { label: 'Services', to: '/services', isAnchor: false },
   { label: 'About', to: 'about', isAnchor: true },
-  { label: 'Contact', to: '/contact', isAnchor: false },
 ];
 
 const logoImage = '/images/abni-logo.png';
@@ -73,10 +72,8 @@ const Navbar = () => {
     [location.pathname, navigate, dispatch]
   );
 
-  const isActive = (link: NavLink): boolean => {
-    if (link.isAnchor) return location.pathname === '/';
-    return location.pathname === link.to;
-  };
+  const isActive = (link: NavLink): boolean =>
+    !link.isAnchor && location.pathname === link.to;
 
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));

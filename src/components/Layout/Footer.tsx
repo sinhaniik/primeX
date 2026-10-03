@@ -14,7 +14,7 @@ const Footer = () => {
             className="h-14 w-auto max-w-[180px] object-contain"
           />
           <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-            ISO 9001-2015 certified industrial manufacturer. Fabrication, coating, press shop services and high-performance spray paints.
+            Fabrication, coating, press shop services and high-performance spray paints.
           </p>
         </div>
 
@@ -37,9 +37,9 @@ const Footer = () => {
             Services
           </h4>
           <ul className="space-y-3 text-sm text-[var(--color-muted)]">
-            <li><Link to="/contact" className="hover:text-[var(--color-accent)] transition-colors">Fabrication Works</Link></li>
-            <li><Link to="/contact" className="hover:text-[var(--color-accent)] transition-colors">Coating Job Work</Link></li>
-            <li><Link to="/contact" className="hover:text-[var(--color-accent)] transition-colors">Press Shop Work</Link></li>
+            <li><Link to="/services" className="hover:text-[var(--color-accent)] transition-colors">Fabrication Works</Link></li>
+            <li><Link to="/services" className="hover:text-[var(--color-accent)] transition-colors">Coating Job Work</Link></li>
+            <li><Link to="/services" className="hover:text-[var(--color-accent)] transition-colors">Press Shop Work</Link></li>
           </ul>
         </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
               <div className="w-5 h-5 border border-[var(--color-accent)] flex items-center justify-center text-[8px] text-[var(--color-accent)] font-bold">
                 GST
               </div>
-              <span>GSTIN 24LIOPS2996C1ZK</span>
+              <span>GST No.: 24LIOPS2996C1ZK</span>
             </div>
           </div>
         </div>
