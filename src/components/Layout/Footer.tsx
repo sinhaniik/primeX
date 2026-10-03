@@ -60,11 +60,19 @@ const Footer = () => {
       <div className="border-t border-[var(--color-border-subtle)] py-6">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--color-muted)]">
           <p>&copy; {new Date().getFullYear()} AbNi Unified Engineering. All rights reserved.</p>
-          <div className="flex items-center gap-2">
-            <div className="w-5 h-5 border border-[var(--color-accent)] flex items-center justify-center text-[8px] text-[var(--color-accent)] font-bold">
-              ISO
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 border border-[var(--color-accent)] flex items-center justify-center text-[8px] text-[var(--color-accent)] font-bold">
+                ISO
+              </div>
+              <span>ISO 9001-2015 Certified</span>
             </div>
-            <span>ISO 9001-2015 Certified</span>
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 border border-[var(--color-accent)] flex items-center justify-center text-[8px] text-[var(--color-accent)] font-bold">
+                GST
+              </div>
+              <span>GSTIN 24LIOPS2996C1ZK</span>
+            </div>
           </div>
         </div>
       </div>

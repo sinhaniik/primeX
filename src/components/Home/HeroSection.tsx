@@ -6,6 +6,7 @@ const stats = [
   { value: '7+', label: 'Product Lines' },
   { value: '3', label: 'Services' },
   { value: 'ISO', label: '9001-2015' },
+  { value: 'GSTIN', label: '24LIOPS2996C1ZK' },
 ];
 
 const primeXVideo = '/AbNI%20intro.mp4';
